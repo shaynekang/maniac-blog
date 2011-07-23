@@ -1,0 +1,34 @@
+Feature: Manage Comments
+	In order to make a blog
+	As an author
+	I want to create and manage comments
+	
+	Scenario: Show Comment
+		Given I have a post titled "Hello", content "Hello World!"
+		And I have a comment content "Me too!" in the post "Hello"
+		When I go to the homepage
+		And I follow "Hello"
+		Then I should see "Me too!"
+					
+	@omniauth
+	Scenario: Create Valid Comment		
+		Given I am logged in with guest
+		Given I have a post titled "Hello", content "Hello World!"
+		When I go to the homepage
+		And I follow "Hello"
+		And I fill in "Content" with "Me Too!"
+		And I press "Create Comment"
+		Then I should be on the first post page
+		And I follow "Hello"
+		And I should see "Me Too!"
+		
+	@omniauth
+	Scenario: Delete Comment
+		Given I am logged in with guest
+		Given I have a post titled "Hello", content "Hello World!"
+		And I have a comment content "Me too!" in the post "Hello"
+		When I am on the homepage
+		And I follow "Hello"
+		And I follow "Delete Comment"
+		Then I should be on the first post page
+		And I should have no comment

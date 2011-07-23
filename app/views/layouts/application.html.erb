@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ManiacBlog</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+  <title>Maniac Blog</title>
+  <%= stylesheet_link_tag :all %>
+  <%= javascript_include_tag :defaults %>
+  <%= csrf_meta_tag %>
 </head>
 <body>
-
+<%= notice %>
+<div id="user-nav">
+	<% if current_user %>
+		<%= link_to "Sign out", :signout %>
+	<% else %>
+		<%= link_to "Sign in",  :signin %>
+	<% end %>
+</div>
 <%= yield %>
 
 </body>

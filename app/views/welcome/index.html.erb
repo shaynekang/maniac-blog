@@ -1,0 +1,7 @@
+<%= render posts %>
+
+<%= paginate posts %>
+
+<% if admin? %>
+	<%= link_to 'New Post', [:new, :post] %>
+<% end %>

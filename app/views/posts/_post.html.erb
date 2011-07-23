@@ -1,0 +1,25 @@
+<%= div_for post do %>
+	<div>
+		<%= link_to post.title, post %>
+	</div>
+
+	<div>
+		<%= post.content %>
+	</div>
+
+	<% if admin? %>
+	<div>
+		<%= link_to "Edit Post", [:edit, post] %>
+		<%= link_to "Delete Post", post, :method => :delete %>
+	</div>
+	<% end %>
+
+	<div>
+		<%= render post.comments, :post => post %>
+	</div>
+	
+	<% @comment = (respond_to?(:comment) ? comment : post.comments.build) %>
+	<%= render 'comments/form', :post => post, :comment => @comment %>
+
+	<hr/>
+<% end %>

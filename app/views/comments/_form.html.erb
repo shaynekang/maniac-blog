@@ -1,0 +1,12 @@
+<% if logged_in? %>
+	<%= form_for [post, comment] do |f| %>
+		<%= f.error_messages %>
+	  <div>
+		  <%= f.label :content %>
+		  <%= f.text_area :content %>
+	  </div>
+		<div>
+	    <%= f.submit %>
+	  </div>
+	<% end %>
+<% end %>
