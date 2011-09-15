@@ -43,3 +43,7 @@ group :development, :test do
 	gem 'factory_girl_rails'
 	gem 'rcov'
 end
+
+group :production do
+	gem 'pg'
+end
