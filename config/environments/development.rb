@@ -24,4 +24,7 @@ ManiacBlog::Application.configure do
 
   # Do not compress assets
   config.assets.compress = false
+  
+  # Output pretty (indented) format
+  Slim::Engine.set_default_options :pretty => true
 end

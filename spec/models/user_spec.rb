@@ -1,12 +1,14 @@
 require 'spec_helper'
 
 describe User do
-  include FactoryGirl::Fixtures
-
+  let(:auth) do
+    {'provider' => 'twitter','uid' => '37'}
+  end
+  
   describe "#find_or_create_with_omniauth!" do
     context "when user was already sign up" do
-      before do
-        user.save!
+      let!(:user) do
+        Factory.create(:user, :provider => auth['provider'], :uid => auth['uid'])
       end
       
       it "should return that user" do

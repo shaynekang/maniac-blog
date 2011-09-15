@@ -1,3 +1,3 @@
 class WelcomeController < ApplicationController
-  expose(:posts) { Post.ordered.page params[:page] }
+  expose(:posts) { Post.newest.page params[:page] }
 end

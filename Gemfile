@@ -1,15 +1,19 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0.rc4'
+gem 'rails', '3.1.0'
 
 # Asset template engines
-gem 'haml'
-gem 'json'
-gem 'sass-rails', "~> 3.1.0.rc"
-gem 'coffee-script'
-gem 'uglifier'
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails', "~> 3.1.0"
+  gem 'coffee-rails', "~> 3.1.0"
+  gem 'uglifier'
+end
 
+gem 'slim'
 gem 'jquery-rails'
+gem 'json'
 
 gem 'omniauth', :git => "git://github.com/intridea/omniauth.git"
 gem 'decent_exposure'
@@ -38,8 +42,4 @@ group :development, :test do
 	
 	gem 'factory_girl_rails'
 	gem 'rcov'
-end
-
-group :production do
-  gem 'therubyracer-heroku', '0.8.1.pre3'
 end

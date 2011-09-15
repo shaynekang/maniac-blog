@@ -1,0 +1,16 @@
+doctype html
+html
+	head
+		title Maniac Blog
+		meta name="keywords" content="template language"
+		= stylesheet_link_tag :all
+		= javascript_include_tag :defaults
+		= csrf_meta_tag
+	body
+		= notice
+		div id="user-nav"
+			- if current_user
+				= link_to "Sign out", :signout
+			- else
+				= link_to "Sign in",  :signin
+			= yield
