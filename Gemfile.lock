@@ -147,6 +147,7 @@ GEM
     oauth2 (0.5.0)
       faraday (< 0.8, >= 0.6.1)
       multi_json (~> 1.0.0)
+    pg (0.11.0)
     polyglot (0.3.2)
     posix-spawn (0.3.6)
     pyu-ruby-sasl (0.0.3.3)
@@ -256,6 +257,7 @@ DEPENDENCIES
   kaminari
   nokogiri (= 1.5.0)
   omniauth!
+  pg
   rails (= 3.1.0)
   rcov
   redcarpet
