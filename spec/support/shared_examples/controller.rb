@@ -1,4 +1,14 @@
-
+shared_examples "with valid attribute" do
+  before do
+    subject.should_receive(:save!) { subject }
+  end
+end
+    
+shared_examples "without valid attribute" do
+  before do
+    subject.should_receive(:save!).and_raise(ActiveRecord::RecordInvalid.new(subject))
+  end
+end
 
 shared_examples_for 'expect action' do |action|
   it "should #{action} the #{subject}" do
@@ -7,26 +17,32 @@ shared_examples_for 'expect action' do |action|
   end
 end
 
-shared_examples_for 'redirect to' do |path, message|
-  context message do
-    it "the #{path} page" do
-      request
-      path = respond_to?(path) ? send(path) : path
-      response.should redirect_to path
-    end
+shared_examples_for 'expect action to class' do |action|
+  it "should #{action} the #{subject}" do
+    subject.class.should_receive(action)
+    request
   end
 end
 
-shared_examples_for 'render template' do |template, message|
-  context "message" do
-    before do
-      subject.should_receive(:save!).and_raise(ActiveRecord::RecordInvalid.new(subject))
-    end if message
-    
-    it "#{template}" do
-      request
-      response.should render_template(template)
-    end
+shared_examples_for 'redirect to' do |path|
+  it "the #{path} page" do
+    request
+    path = respond_to?(path) ? send(path) : path
+    response.should redirect_to path
+  end
+end
+
+shared_examples_for 'render template' do |template|
+  it "#{template}" do
+    request
+    response.should render_template(template)
+  end
+end
+
+shared_examples_for "assign value" do |key, value|
+  it "should assign #{key}" do
+    request
+    assigns(key).should == eval(value)
   end
 end
 

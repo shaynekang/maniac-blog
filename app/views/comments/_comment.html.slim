@@ -1,6 +1,6 @@
-div
+.comment-content
 	= comment.content
 
-div
+.comment-nav
 	#= link_to "Edit", [:edit, post, comment]
 	= link_to "Delete Comment", [post, comment], :method => :delete

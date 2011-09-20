@@ -1,10 +1,10 @@
 = form_for post do |f|
 	= f.error_messages
-	div
+	.field
 		= f.label :title
 		= f.text_field :title
-	div
+	.field
 		= f.label :content
 		= f.text_area :content
-	div
+	.field
 		= f.submit

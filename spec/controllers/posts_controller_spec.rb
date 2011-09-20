@@ -12,24 +12,36 @@ describe PostsController do
   describe "POST create" do
     request :post, :create
     
-    it_should_behave_like 'expect action', :save!
-    it_should_behave_like 'redirect to', :root, "when valid attribute"
-    it_should_behave_like 'render template', 'new', 'with invalid attribute'
+    it_behaves_like 'expect action', :save!
+    
+    it_behaves_like "with valid attribute" do
+      it_behaves_like 'redirect to', :root
+    end
+    
+    it_behaves_like "without valid attribute" do
+      it_behaves_like 'render template', 'new'
+    end
   end
   
   describe "PUT update" do
     request :put, :update, :id => 1
     
-    it_should_behave_like 'expect action', :save!
-    it_should_behave_like 'redirect to', :mock_post, "when valid attribute"
-    it_should_behave_like 'render template', 'edit', 'with invalid attribute'
+    it_behaves_like 'expect action', :save!
+    
+    it_behaves_like "with valid attribute" do
+      it_behaves_like 'redirect to', :mock_post
+    end
+    
+    it_behaves_like "without valid attribute" do
+      it_behaves_like 'render template', 'edit'
+    end
   end
   
   describe "DELETE destroy" do
     request :delete, :destroy, :id => 1
     
-    it_should_behave_like 'expect action', :destroy
-    it_should_behave_like 'redirect to', :root
+    it_behaves_like 'expect action', :destroy
+    it_behaves_like 'redirect to', :root
   end
 end
 

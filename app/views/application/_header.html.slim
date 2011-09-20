@@ -1,0 +1,9 @@
+#header
+	ul#user-nav
+		- if current_user
+			li = link_to "Sign out", :signout
+		- else
+			li = link_to "Sign in",  :signin
+	#title
+		h1 = link_to "RAILS MANIAC", :root
+		p Ruby on Rails Tips and Techs

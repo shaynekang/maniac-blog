@@ -1,0 +1,29 @@
+.post {
+  font-family: 'Helvetica Neue','나눔고딕';
+  
+  margin: 0 0 80px;
+  padding-bottom: 40px;
+  
+  .post-title {
+    text-align: center;
+    border-bottom: 4px solid #7AC7BD;
+    font-size: 40px;
+    font-weight: lighter;
+    line-height: 40px;
+    margin: 0 0 20px;
+    padding: 0 0 20px;
+    text-transform: uppercase;
+  }
+  
+  .post-content {
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 10px;
+  }
+  
+  pre {
+    font-family: 'monaco';
+    font-size: 12px;
+    margin: 20px 10px 20px 10px;
+  }
+}

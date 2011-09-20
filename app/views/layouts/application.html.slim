@@ -8,9 +8,7 @@ html
 		= csrf_meta_tags
 	body
 		= notice
-		div id="user-nav"
-			- if current_user
-				= link_to "Sign out", :signout
-			- else
-				= link_to "Sign in",  :signin
-			= yield
+		#container
+			= render 'header'
+			= render 'content'
+			= render 'footer'

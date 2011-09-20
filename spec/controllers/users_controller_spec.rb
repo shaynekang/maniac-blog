@@ -3,6 +3,7 @@ require 'spec_helper'
 
 describe UsersController do
   mocks :user
+  subject { mock_user }
   
   describe "POST create" do
     request :post, :create
@@ -11,15 +12,11 @@ describe UsersController do
       User.stub(:find_or_create_with_omniauth!) { mock_user }
     end
     
-    it_should_behave_like "redirect to", :root
-    it_should_behave_like "assign session", :user_id, 'mock_user.id'
-    it_should_behave_like "new notice", "Successfully Signed in!"
-    
-    it "should assign the user as @user" do
-      User.should_receive(:find_or_create_with_omniauth!) { mock_user }
-      request
-      assigns(:user).should == mock_user
-    end
+    it_behaves_like "redirect to", :root
+    it_behaves_like "assign session", :user_id, 'mock_user.id'
+    it_behaves_like "new notice", "Successfully Signed in!"
+    it_behaves_like "expect action to class", :find_or_create_with_omniauth!
+    it_behaves_like "assign value", :user, 'mock_user'
   end
   
   describe "DELETE destroy" do
@@ -29,7 +26,7 @@ describe UsersController do
       session[:user_id] = 37
     end
 
-    it_should_behave_like "redirect to", :root
-    it_should_behave_like "new notice", "Successfully Signed out!"
+    it_behaves_like "redirect to", :root
+    it_behaves_like "new notice", "Successfully Signed out!"
   end
 end

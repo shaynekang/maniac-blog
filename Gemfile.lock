@@ -179,7 +179,6 @@ GEM
       rdoc (~> 3.4)
       thor (~> 0.14.6)
     rake (0.9.2)
-    rcov (0.9.10)
     rdoc (3.9.4)
     redcarpet (1.17.2)
     rest-client (1.6.7)
@@ -259,7 +258,6 @@ DEPENDENCIES
   omniauth!
   pg
   rails (= 3.1.0)
-  rcov
   redcarpet
   rspec-rails
   sass-rails (~> 3.1.0)

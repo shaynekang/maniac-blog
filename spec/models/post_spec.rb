@@ -1,16 +1,18 @@
 require 'spec_helper'
 
-describe Post do
-  # class Post
-  #   include ActiveRecord::Extensions::Orderable
-  # end
+describe Post do  
+  let!(:today) { Factory.create(:post, :created_at => DateTime.now) }
+  let!(:yesterday) { Factory.create(:post, :created_at => DateTime.now - 1.day) }
   
-  describe "##ordered" do
+  describe "##newest" do
     it "should return latest posts" do
-      today = Factory.create(:post, :created_at => DateTime.now)
-      yesterday = Factory.create(:post, :created_at => DateTime.now - 1.day)
-      
       Post.newest.should == [today, yesterday]
+    end
+  end
+  
+  describe "##oldest" do
+    it "should return oldest posts" do
+      Post.oldest.should == [yesterday, today]
     end
   end
 end
