@@ -1,7 +1,6 @@
 #post-list
 	= render posts
-	= paginate posts
-
+	
 - if admin?
 	#post-list-nav
 		= link_to 'New Post', [:new, :post]

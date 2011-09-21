@@ -1,11 +1,9 @@
 .post {
   font-family: 'Helvetica Neue','나눔고딕';
-  
   margin: 0 0 80px;
   padding-bottom: 40px;
   
   .post-title {
-    text-align: center;
     border-bottom: 4px solid #7AC7BD;
     font-size: 40px;
     font-weight: lighter;
@@ -25,5 +23,30 @@
     font-family: 'monaco';
     font-size: 12px;
     margin: 20px 10px 20px 10px;
+    padding: 10px;
+    border-color: #BBBBBB #DDDDDD #DDDDDD #BBBBBB;
+    border-style: solid;
+    border-width: 1px;
+  }
+}
+
+#footer {
+  font-family: 'Helvetica Neue','나눔고딕';
+  
+  .pagination {
+    padding-bottom: 50px;
+    text-align: center;
+    font-size: 100%;
+
+    .prev, .first, .next, .last {
+      font-size: 70%;
+    }
+        
+    .prev {
+      padding-right: 10px;
+    }
+    .next {
+      padding-left: 10px;
+    }
   }
 }

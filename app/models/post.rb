@@ -7,5 +7,5 @@ class Post < ActiveRecord::Base
   
   accepts_nested_attributes_for :comments, :allow_destroy => :true
   
-  paginates_per 3
+  paginates_per 1
 end

@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_filter :admin_required, :except => [:index, :show]
+  
   expose(:posts) { Post.newest.page params[:page] }
   expose(:post)
   

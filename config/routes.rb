@@ -1,5 +1,6 @@
 ManiacBlog::Application.routes.draw do
   resources :posts do
+    get 'pages/:page', :action => :index, :on => :collection
     resources :comments
   end
   
