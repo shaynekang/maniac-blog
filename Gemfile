@@ -35,6 +35,10 @@ group :development, :test do
 	gem 'capybara'
 	gem 'database_cleaner'
 
+	gem 'guard'
+	gem 'guard-rspec'
+	gem 'guard-livereload'
+
 	gem 'autotest-rails'
 	gem 'autotest-fsevent'
 	gem 'autotest-growl'

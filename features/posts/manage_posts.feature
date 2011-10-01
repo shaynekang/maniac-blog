@@ -7,8 +7,9 @@ Feature: Manage Posts
 		Given I have a post titled "First Post", content "Hello!"
 		Given I have a post titled "Second Post", content "Bye!"
 		When I go to the homepage
-		Then I should see "First Post"
 		Then I should see "Second Post"
+		When I follow "Next"
+		Then I should see "First Post"
 		
 	Scenario: Show Post
 		Given I have a post titled "Hello", content "Hello World!"
@@ -34,7 +35,7 @@ Feature: Manage Posts
 		Given I am logged in with admin
 		And I have a post titled "Hello", content "Hello World!"
 		When I go to the homepage
-		And I follow "Edit Post"
+		And I follow "Edit" within ".post-nav"
 		And I fill in "Title" with "Bye"
 		And I fill in "Content" with "Goodbye World!"
 		And I press "Update Post"
@@ -47,6 +48,6 @@ Feature: Manage Posts
 		Given I am logged in with admin
 		And I have a post titled "Hello", content "Hello World!"
 		When I am on the homepage
-		And I follow "Delete Post"
+		And I follow "Delete" within ".post-nav"
 		Then I should be on the homepage
 		And I should have no post

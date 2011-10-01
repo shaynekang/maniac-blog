@@ -4,8 +4,8 @@ Feature: Manage Comments
 	I want to create and manage comments
 	
 	Scenario: Show Comment
-		Given I have a post titled "Hello", content "Hello World!"
-		And I have a comment content "Me too!" in the post "Hello"
+ 		Given I have a post titled "Hello", content "Hello World!"
+		And I have a comment content "Me too!" in the post "Hello" to guest account
 		When I go to the homepage
 		And I follow "Hello"
 		Then I should see "Me too!"
@@ -26,9 +26,9 @@ Feature: Manage Comments
 	Scenario: Delete Comment
 		Given I am logged in with guest
 		Given I have a post titled "Hello", content "Hello World!"
-		And I have a comment content "Me too!" in the post "Hello"
+		And I have a comment content "Me too!" in the post "Hello" to guest account
 		When I am on the homepage
 		And I follow "Hello"
-		And I follow "Delete Comment"
+		And I follow "Delete" within ".comment-nav"
 		Then I should be on the first post page
 		And I should have no comment

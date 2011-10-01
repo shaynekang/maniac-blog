@@ -18,7 +18,7 @@ Feature: Manage Posts with Validation
 		Given I am logged in with admin
 		And I have a post titled "Hello", content "Hello World!"
 		When I am on the homepage
-		And I follow "Edit Post"
+		And I follow "Edit" within ".post-nav"
 		And I fill in "Title" with "<title>"
 		And I fill in "Content" with "<content>"
 		And I press "Update Post"

@@ -1,8 +1,13 @@
 - if logged_in?
-	= form_for [post, comment] do |f|
-		= f.error_messages
-		.field
-			= f.label :content
-			= f.text_area :content
-		.field
-			= f.submit
+	.comment-form
+		= image_tag current_user.avatar
+		= form_for [post, comment] do |f|
+			= f.error_messages
+			.comment-content-field
+				= f.label :content
+				= f.text_area :content
+			.field
+				= f.submit
+- else
+	#need-signin
+		= link_to "Please sign in if you want to write a comment", :signin

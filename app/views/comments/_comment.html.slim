@@ -1,6 +1,10 @@
-.comment-content
-	= comment.content
-
-.comment-nav
-	#= link_to "Edit", [:edit, post, comment]
-	= link_to "Delete Comment", [post, comment], :method => :delete
+= div_for comment do	
+	.comment-signature
+		= image_tag comment.user.avatar
+		h3 = comment.user.name
+	.comment-content
+		= markdown comment.content
+	
+	- if comment.user == current_user
+		.comment-nav
+		 	= link_to "Delete", [post, comment], :method => :delete

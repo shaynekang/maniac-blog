@@ -1,0 +1,90 @@
+.comment {
+  clear: both;
+  margin: 30px 0 20px 0;
+}
+
+.comment-signature {
+  padding-top: 10px 0 10px 0;
+  
+  img {
+    float: left;
+    border-radius: 3px;
+  } 
+  
+  h3 {
+    float: right;
+    background: url(backgrounds-sprite.png) 0 0 repeat-x;
+    display: block;
+    font-size: 17px;
+    font-weight: bold;
+    color: #595959;
+    padding: 10px;
+    border: 1px solid #CCC;
+    border: 1px solid rgba(0, 0, 0, .15);
+    margin: 0 0 1em;
+    max-height: 36px;
+    border-radius: 3px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    line-height: 24px;
+    padding-bottom: 0;
+    width: 610px;
+    height: 48px;
+  }
+}
+
+.comment-content {
+  float: right;
+  width: 620px;
+  font-size: 13px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  
+  p {
+    margin: 0 0 20px 0;
+  }
+}
+
+.comment-nav {
+  clear: both;
+  font-size: 12px;
+  text-align: right;
+}
+
+.comment-form {
+  margin: 20px 0 20px 0;
+  text-align: right;
+  
+  img {
+    float: left;
+    border-radius: 3px;
+  }
+}
+
+.comment-content-field {
+  label {
+    display: none;
+    visibility: hidden;
+  }
+  
+  textarea {
+    width: 620px;
+    height: 80px;
+  }
+}
+
+#need-signin {
+  clear: both;
+  text-align: center;
+  font-size: 180%;
+  padding: 50px 10px 50px 10px;
+  
+  a {
+    color: #444;
+  }
+  a:hover {    
+    color: #7AC7BD;
+  }
+}

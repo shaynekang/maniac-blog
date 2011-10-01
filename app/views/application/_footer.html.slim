@@ -1,5 +1,6 @@
 #footer
-	= paginate posts, :params => {:controller => 'posts', :action => 'index'}
+	-if respond_to?(:posts)
+		= paginate posts, :params => {:controller => 'posts', :action => 'index'}
 	
 	#copyright
 		p ©2011 Rails Maniac
