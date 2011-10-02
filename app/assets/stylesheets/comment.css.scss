@@ -50,21 +50,31 @@
   }
 }
 
-.comment-nav {
+.comment-info {
   clear: both;
+  float: right;
+  width: 620px;
   font-size: 12px;
   text-align: right;
   margin-top: 0;
   padding-bottom: 20px;
   
-  li {
-    float: right;
-    padding-right: 5px;
-  }
+  color: #595959;
+  opacity: 0.6;
   
-  a {
-    color: #595959;
-    opacity: 0.6;
+  .comment-timestamp {
+    float: left;
+  }
+
+  .comment-nav { 
+    li {
+      float: right;
+      padding-right: 5px;
+    }
+
+    a {
+      color: #595959;
+    }
   }
 }
 

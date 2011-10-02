@@ -1,4 +1,6 @@
 = div_for post do
+	.post-timestamp
+		= post.created_at.to_date.inspect
 	.post-title
 		= link_to post.title, post
 
@@ -13,6 +15,8 @@
 	.post-comment
 		.post-comment-list
 			= render post.comments, :post => post
-	
+		
+		.clear
+		
 		- @comment = (respond_to?(:comment) ? comment : post.comments.build)
 		= render 'comments/form', :post => post, :comment => @comment
