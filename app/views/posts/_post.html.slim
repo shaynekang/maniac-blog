@@ -6,9 +6,9 @@
 		= markdown post.content
 
 	- if admin?
-		.post-nav
-			= link_to "Edit", [:edit, post]
-			= link_to "Delete", post, :method => :delete
+		ul.post-nav
+			li = link_to "Edit", [:edit, post]
+			li = link_to "Delete", post, :method => :delete, :confirm => "Are you sure?"
 
 	.post-comment
 		.post-comment-list

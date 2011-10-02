@@ -16,7 +16,6 @@
   .post-content {
     font-size: 13px;
     line-height: 20px;
-    margin-bottom: 10px;
   }
   
   pre {
@@ -32,6 +31,18 @@
   .post-nav {
     font-size: 12px;
     text-align: right;
+    float: right;
+    margin-top: 0;
+    
+    li {
+      float: left;
+      padding-right: 5px;
+    }
+    
+    a {
+      color: #595959;
+      opacity: 0.6;
+    }
   }
 }
 

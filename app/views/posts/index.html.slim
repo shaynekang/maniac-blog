@@ -3,9 +3,7 @@
 		= render posts
 	- else
 		h1.center There is no post
-
-
-	
+		
 - if admin?
 	#post-list-nav
 		= link_to 'New Post', [:new, :post]
