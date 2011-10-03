@@ -24,6 +24,18 @@ describe CommentsController do
     end
   end
   
+  describe "PUT update" do
+    request :put, :update, :post_id => 1, :id => 1
+    
+    it_behaves_like "expect action", :save!
+    it_behaves_like "with valid attribute" do
+      it_should_behave_like 'redirect to', :mock_post
+    end
+    it_behaves_like "without valid attribute" do
+      it_behaves_like 'render template', 'posts/show'
+    end
+  end
+  
   describe "DELETE destroy" do
     request :delete, :destroy, :post_id => 1, :id => 1
     

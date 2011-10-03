@@ -18,10 +18,21 @@ Feature: Manage Comments
 		And I fill in "Content" with "Me Too!"
 		And I press "Create Comment"
 		Then I should be on the first post page
-		And I follow "Hello"
 		And I should see "Me Too!"
 	
 	@focus
+	Scenario: Edit Valid Comment
+		Given I am logged in with guest
+		Given I have a post titled "Hello", content "Hello World!"
+		And I have a comment content "Me too!" in the post "Hello" to guest account
+		When I am on the homepage
+		And I follow "Hello"
+		And I follow "Edit" within ".comment-nav"
+		And I fill in "Content" with "Me Three!"
+		And I press "Update Comment"
+		Then I should be on the first post page
+		And I should see "Me Three!"
+		
 	Scenario: Delete Comment
 		Given I am logged in with guest
 		Given I have a post titled "Hello", content "Hello World!"

@@ -13,6 +13,14 @@ class CommentsController < ApplicationController
     render 'posts/show'
   end
   
+  def update
+    comment.user_id = current_user
+    comment.save!
+    redirect_to post
+  rescue ActiveRecord::RecordInvalid
+    render 'posts/show'
+  end
+  
   def destroy
     comment.destroy
     redirect_to post

@@ -13,4 +13,5 @@
 		
 			- if comment.user == current_user
 				ul.comment-nav
+			 		li = link_to "Edit", [:edit, post, comment]
 			 		li = link_to "Delete", [post, comment], :method => :delete, :confirm => "Are you sure?"
