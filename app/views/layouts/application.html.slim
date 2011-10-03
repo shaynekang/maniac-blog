@@ -7,7 +7,10 @@ html
 		= javascript_include_tag "application"
 		= csrf_meta_tags
 	body
-		= notice
+		- if notice
+			span#notice = notice
+		- if alert
+			span#alert = alert
 		#container
 			= render 'header'
 			= render 'content'

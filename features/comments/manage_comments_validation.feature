@@ -3,8 +3,6 @@ Feature: Manage Comments with Validation
 	As an author
 	I want to validate comments
 	
-	
-	@omniauth
 	Scenario Outline: Create Invalid Comment
 		Given I am logged in with guest
 		Given I have a post titled "Hello", content "Hello World!"

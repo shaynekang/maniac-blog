@@ -3,7 +3,6 @@ Feature: Manage Posts with Validation
 	As an author
 	I want to validate posts
 	
-	@omniauth	
 	Scenario Outline: Create Invalid Post
 		Given I am logged in with admin
  		And I am on the homepage
@@ -13,7 +12,6 @@ Feature: Manage Posts with Validation
 		And I press "Create Post"
 		Then I should see "<message>"
 		
-	@omniauth
 	Scenario Outline: Edit Invalid Post
 		Given I am logged in with admin
 		And I have a post titled "Hello", content "Hello World!"

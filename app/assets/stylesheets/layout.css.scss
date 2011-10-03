@@ -1,3 +1,19 @@
+#notice {
+  display: block;
+  background-color: green;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}
+
+#alert {
+  display: block;
+  background-color: red;
+  text-align: center;
+  color: white;
+  padding: 10px; 
+}
+
 #header {
   background: none repeat scroll 0 0 #981A21;
   text-align: center;
@@ -5,7 +21,6 @@
   padding: 0;
   
   #user-nav {
-    text-align: right;
     width: 200px;
     height: 15px;
     position: absolute;
@@ -13,10 +28,23 @@
     padding: 3px 5px 3px 5px;
     right: 10px;
     font-size: 12px;
+    
+    li {
+      text-align: center;
+      float: left;
+      padding: 0 3px 0 3px;
+      margin-left: 5px;
+      line-height: 20px;
+      text-shadow: 1px 1px 0 black;
+      border-radius: 3px;
+    }
+    
+    a {
+      color: #DDD;
+    }
   }
   
   #title {
-    clear: both;
     margin: 0 auto;
     padding: 60px 100px 20px;
     width: 500px;

@@ -18,7 +18,6 @@ Feature: Manage Posts
 		Then I should see "Hello"
 		Then I should see "Hello World"
 			
-	@omniauth
 	Scenario: Create Valid Post
 		Given I am logged in with admin
 		When I go to the homepage
@@ -30,7 +29,6 @@ Feature: Manage Posts
 		And I should see "Hello"
 		And I should see "Hello World"
 
-	@omniauth	
 	Scenario: Edit Valid Post
 		Given I am logged in with admin
 		And I have a post titled "Hello", content "Hello World!"
@@ -43,7 +41,6 @@ Feature: Manage Posts
 		And I should see "Bye"
 		And I should see "Goodbye World!"
 		
-	@omniauth
 	Scenario: Delete Post
 		Given I am logged in with admin
 		And I have a post titled "Hello", content "Hello World!"

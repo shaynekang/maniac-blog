@@ -10,7 +10,6 @@ Feature: Manage Comments
 		And I follow "Hello"
 		Then I should see "Me too!"
 					
-	@omniauth
 	Scenario: Create Valid Comment		
 		Given I am logged in with guest
 		Given I have a post titled "Hello", content "Hello World!"
@@ -21,8 +20,8 @@ Feature: Manage Comments
 		Then I should be on the first post page
 		And I follow "Hello"
 		And I should see "Me Too!"
-		
-	@omniauth
+	
+	@focus
 	Scenario: Delete Comment
 		Given I am logged in with guest
 		Given I have a post titled "Hello", content "Hello World!"

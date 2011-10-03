@@ -1,4 +1,4 @@
-Before('@omniauth') do
+Before do
   OmniAuth.config.test_mode = true
   OmniAuth.config.mock_auth[:twitter] = {
       "provider"=>"twitter",
@@ -6,7 +6,7 @@ Before('@omniauth') do
   }
 end
 
-After('@omniauth') do
+After do
   OmniAuth.config.test_mode = false
 end
 

@@ -38,6 +38,8 @@ group :development, :test do
 	gem 'guard'
 	gem 'guard-rspec'
 	gem 'guard-livereload'
+	gem 'rb-fsevent'
+	gem 'growl'
 
 	gem 'autotest-rails'
 	gem 'autotest-fsevent'

@@ -1,15 +1,16 @@
-= div_for comment do	
-	.comment-signature
-		= image_tag comment.user.avatar
-		h3 = comment.user.name
+- unless comment.new_record?
+	= div_for comment do
+		.comment-signature
+			= image_tag comment.user.avatar
+			h3 = comment.user.name
 		
-	.comment-content
-		= markdown comment.content	
+		.comment-content
+			= markdown comment.content	
 		
-	.comment-info
-		.comment-timestamp
-			= time_ago_in_words comment.created_at
+		.comment-info
+			.comment-timestamp
+				= "#{time_ago_in_words comment.created_at} ago"
 		
-		- if comment.user == current_user
-			ul.comment-nav
-			 	li = link_to "Delete", [post, comment], :method => :delete, :confirm => "Are you sure?"
+			- if comment.user == current_user
+				ul.comment-nav
+			 		li = link_to "Delete", [post, comment], :method => :delete, :confirm => "Are you sure?"

@@ -57,7 +57,7 @@
   font-size: 12px;
   text-align: right;
   margin-top: 0;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
   
   color: #595959;
   opacity: 0.6;
@@ -67,8 +67,10 @@
   }
 
   .comment-nav { 
+    float: right;
+    margin: 0;
+    
     li {
-      float: right;
       padding-right: 5px;
     }
 

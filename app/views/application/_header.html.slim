@@ -1,6 +1,8 @@
 #header
 	ul#user-nav
 		- if current_user
+			- if admin?
+				li= link_to 'New Post', [:new, :post]
 			li = link_to "Sign out", :signout
 		- else
 			li = link_to "Sign in",  :signin
