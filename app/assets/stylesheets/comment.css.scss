@@ -78,6 +78,9 @@
     a {
       color: #595959;
     }
+    a:hover {
+      color: black;
+    }
   }
 }
 
@@ -100,6 +103,15 @@
   textarea {
     width: 620px;
     height: 80px;
+  }
+}
+
+.errorExplanation {
+  text-align: center;
+  margin-bottom: 30px;
+  
+  h2 {
+    font-size: 24px;
   }
 }
 

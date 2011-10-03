@@ -23,6 +23,8 @@ gem 'redcarpet'
 gem 'albino'
 gem 'nokogiri', "1.5.0"
 
+gem 'rails-i18n'
+
 gem 'dynamic_form'
 
 group :development, :test do

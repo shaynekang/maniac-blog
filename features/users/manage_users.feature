@@ -3,7 +3,6 @@ Feature: Manage Users
 	As an author
 	I want to signup, signin and signout with user account
 	
-	@omniauth
 	Scenario Outline: Sign Up
 		Given I am on the homepage
 		And I follow "Sign in"
@@ -11,7 +10,6 @@ Feature: Manage Users
 		Then I should see "Successfully Signed in!"
 		And I should be on the homepage
 
-	@omniauth
 	Scenario Outline: Sign In
 		Given I have a user provided "twitter", uid "37"
 		And I am on the homepage
@@ -20,7 +18,6 @@ Feature: Manage Users
 		Then I should see "Successfully Signed in!"
 		And I should be on the homepage		
 
-	@omniauth
 	Scenario Outline: Sign Out
 		And I am on the homepage
 		And I follow "Sign in"

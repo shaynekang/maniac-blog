@@ -9,8 +9,8 @@
 
 	- if admin?
 		ul.post-nav
-			li = link_to "Edit", [:edit, post]
-			li = link_to "Delete", post, :method => :delete, :confirm => "Are you sure?"
+			li = link_to t("nav.edit"), [:edit, post]
+			li = link_to t("nav.delete"), post, :method => :delete, :confirm => "Are you sure?"
 
 	.post-comment
 		.post-comment-list

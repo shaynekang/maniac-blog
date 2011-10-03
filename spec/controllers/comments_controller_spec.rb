@@ -32,7 +32,7 @@ describe CommentsController do
       it_should_behave_like 'redirect to', :mock_post
     end
     it_behaves_like "without valid attribute" do
-      it_behaves_like 'render template', 'posts/show'
+      it_behaves_like 'render template', 'edit'
     end
   end
   

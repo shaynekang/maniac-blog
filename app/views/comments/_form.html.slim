@@ -1,8 +1,8 @@
 - if logged_in?
 	.comment-form
-		= image_tag current_user.avatar
 		= form_for [post, comment] do |f|
 			= f.error_messages
+			= image_tag current_user.avatar
 			.comment-content-field
 				= f.label :content
 				= f.text_area :content
@@ -10,4 +10,4 @@
 				= f.submit
 - else
 	#need-signin
-		= link_to "Please sign in if you want to write a comment", :signin
+		= link_to t('notice.comment.signin'), :signin

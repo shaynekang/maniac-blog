@@ -18,7 +18,7 @@ class CommentsController < ApplicationController
     comment.save!
     redirect_to post
   rescue ActiveRecord::RecordInvalid
-    render 'posts/show'
+    render 'edit'
   end
   
   def destroy

@@ -1,0 +1,43 @@
+ko:
+  activerecord:
+    models:
+      post: 포스트
+      comment: 코멘트
+      user: 사용자
+    attributes:  
+      post:
+        title: 제목
+        content: 포스트 내용
+      comment:
+        content: 코멘트 내용
+      user:
+        provider: 인증 서비스 제공자
+        uid: 인증 번호
+   
+  time:
+    ago: 전
+  
+  nav:
+    signin: 로그인
+    signout: 로그아웃
+    newpost: 새 포스트
+    edit: 수정
+    delete: 삭제
+    
+  notice : 
+    signin: 성공적으로 로그인했습니다!
+    signout: 성공적으로 로그아웃했습니다!
+    comment:
+      signin: 코멘트를 작성하고 싶다면 로그인하세요
+    provider:
+      choose: 인증 서비스를 선택하세요
+  
+  copyright:
+    title: ©2011 레일즈매니악
+      
+  views:  
+    pagination:  
+      previous: 이전
+      next: 다음
+      first: 처음
+      last: 마지막

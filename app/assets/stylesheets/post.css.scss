@@ -51,6 +51,9 @@
       color: #595959;
       opacity: 0.6;
     }
+    a:hover {
+      color: black;
+    }
   }
 }
 
@@ -67,10 +70,12 @@
     }
         
     .prev {
+      padding-left: 3px;
       padding-right: 10px;
     }
     .next {
       padding-left: 10px;
+      padding-right: 3px;
     }
   }
 }

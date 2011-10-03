@@ -184,6 +184,8 @@ GEM
       activesupport (= 3.1.0)
       bundler (~> 1.0)
       railties (= 3.1.0)
+    rails-i18n (0.1.9)
+      i18n (~> 0.5)
     railties (3.1.0)
       actionpack (= 3.1.0)
       activesupport (= 3.1.0)
@@ -276,6 +278,7 @@ DEPENDENCIES
   omniauth!
   pg
   rails (= 3.1.0)
+  rails-i18n
   rb-fsevent
   redcarpet
   rspec-rails

@@ -2,4 +2,32 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
+  hello: Hello world
+
+  time:
+    ago: ago
+
+  nav:
+    signin: Sign In
+    signout: Sign Out
+    newpost: New Post
+    edit: Edit
+    delete: Delete
+    
+  notice:
+    signin: Successfully signed in!
+    signout: Successfully signed out!
+    comment:
+      signin: Please sign in if you want to write a comment
+    provider:
+      choose: Choose providers
+      
+  copyright:
+    title: ©2011 Rails Maniac
+        
+  views:  
+    pagination:  
+      previous: Previous
+      next: Next
+      first: First
+      last: Last

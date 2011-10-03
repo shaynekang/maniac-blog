@@ -2,10 +2,10 @@
 	ul#user-nav
 		- if current_user
 			- if admin?
-				li= link_to 'New Post', [:new, :post]
-			li = link_to "Sign out", :signout
+				li= link_to t('nav.newpost'), [:new, :post]
+			li = link_to t('nav.signout'), :signout
 		- else
-			li = link_to "Sign in",  :signin
+			li = link_to t('nav.signin'),  :signin
 	#title
 		h1 = link_to "RAILS MANIAC", :root
 		p Ruby on Rails Tips and Techs
